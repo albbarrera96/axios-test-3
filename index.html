@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HELLO VUE</title>
+    <link href="style.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+        <h1>API TAKE 2</h1>
+    <div id="vue-app">
+
+        <h2>CLCIK ON THE CRAPPY BUTTON TO MAKE IT WORK</h2>
+        <br>
+        <button style="color: rgb(255, 255, 255);" v-on:click="getComents">CLICK HERE</button>
+        <button style="background:rgb(192, 1, 1); color:rgb(255, 255, 255);"  v-on:click="coments = []">RESTART</button>
+        <button style="background:rgb(0, 40, 170); color:rgb(255, 255, 255);"  v-on:click="getComents">GET THE COMENTS</button>
+        <br>
+        <br>
+        <h3>There are {{coments.length}} coments in this page</h3>
+        <ol>
+            <li v-for="coment in coments" v-text="coment.name"></li>
+        </ol>
+        <br>
+        <br>
+
+    </div>    
+    <script src="app.js"></script>
+</body>
+</html>
